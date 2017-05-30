@@ -16,10 +16,11 @@ ipp.h:122:17: error: expected ‘:’, ‘,’, ‘;’, ‘}’ or ‘__attribu
  #define status u.st
                  ^
 解决方法：
-在apue.2e/ipp.h中定义了一个宏定义status和/usr/include/i386-linux-gnu/bits/timex.h中的成员status冲突
+在apue.2e/ipp/ipp.h中定义了一个宏定义status和/usr/include/i386-linux-gnu/bits/timex.h中的成员status冲突
 修改这个apue.2e/ipp/ipp.h文件中的宏名称，例如改为status_apue
 #define status_apue u.st
-然后将apue.2e/ipp/printd.c中977行的 hp->status 改为hp->Status_apue
+然后将apue.2e/ipp/printd.c中977行的 hp->status 改为hp->status_apue
+
 2
 gcc -DLINUX -ansi -I/home/kolya/Downloads/apue.2e/include -Wall -D_GNU_SOURCE   -c -o getenv1.o getenv1.c
 getenv1.c:4:20: error: ‘ARG_MAX’ undeclared here (not in a function)
