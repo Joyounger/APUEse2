@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/kolya/src/APUEse2/chap1_UNIX_System_Overview
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,82 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 1-7
+# Target rules for targets named 1-4
 
 # Build rule for target.
-1-7: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-7
-.PHONY : 1-7
+1-4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-4
+.PHONY : 1-4
 
 # fast build rule for target.
-1-7/fast:
-	$(MAKE) -f CMakeFiles/1-7.dir/build.make CMakeFiles/1-7.dir/build
-.PHONY : 1-7/fast
-
-#=============================================================================
-# Target rules for targets named 1-6
-
-# Build rule for target.
-1-6: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-6
-.PHONY : 1-6
-
-# fast build rule for target.
-1-6/fast:
-	$(MAKE) -f CMakeFiles/1-6.dir/build.make CMakeFiles/1-6.dir/build
-.PHONY : 1-6/fast
-
-#=============================================================================
-# Target rules for targets named 1-5
-
-# Build rule for target.
-1-5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-5
-.PHONY : 1-5
-
-# fast build rule for target.
-1-5/fast:
-	$(MAKE) -f CMakeFiles/1-5.dir/build.make CMakeFiles/1-5.dir/build
-.PHONY : 1-5/fast
-
-#=============================================================================
-# Target rules for targets named 1-1
-
-# Build rule for target.
-1-1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-1
-.PHONY : 1-1
-
-# fast build rule for target.
-1-1/fast:
-	$(MAKE) -f CMakeFiles/1-1.dir/build.make CMakeFiles/1-1.dir/build
-.PHONY : 1-1/fast
-
-#=============================================================================
-# Target rules for targets named 1-8
-
-# Build rule for target.
-1-8: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-8
-.PHONY : 1-8
-
-# fast build rule for target.
-1-8/fast:
-	$(MAKE) -f CMakeFiles/1-8.dir/build.make CMakeFiles/1-8.dir/build
-.PHONY : 1-8/fast
-
-#=============================================================================
-# Target rules for targets named 1-3
-
-# Build rule for target.
-1-3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-3
-.PHONY : 1-3
-
-# fast build rule for target.
-1-3/fast:
-	$(MAKE) -f CMakeFiles/1-3.dir/build.make CMakeFiles/1-3.dir/build
-.PHONY : 1-3/fast
+1-4/fast:
+	$(MAKE) -f CMakeFiles/1-4.dir/build.make CMakeFiles/1-4.dir/build
+.PHONY : 1-4/fast
 
 #=============================================================================
 # Target rules for targets named 1-2
@@ -202,17 +137,108 @@ depend:
 .PHONY : 1-2/fast
 
 #=============================================================================
-# Target rules for targets named 1-4
+# Target rules for targets named 1-8
 
 # Build rule for target.
-1-4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1-4
-.PHONY : 1-4
+1-8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-8
+.PHONY : 1-8
 
 # fast build rule for target.
-1-4/fast:
-	$(MAKE) -f CMakeFiles/1-4.dir/build.make CMakeFiles/1-4.dir/build
-.PHONY : 1-4/fast
+1-8/fast:
+	$(MAKE) -f CMakeFiles/1-8.dir/build.make CMakeFiles/1-8.dir/build
+.PHONY : 1-8/fast
+
+#=============================================================================
+# Target rules for targets named 1-1
+
+# Build rule for target.
+1-1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-1
+.PHONY : 1-1
+
+# fast build rule for target.
+1-1/fast:
+	$(MAKE) -f CMakeFiles/1-1.dir/build.make CMakeFiles/1-1.dir/build
+.PHONY : 1-1/fast
+
+#=============================================================================
+# Target rules for targets named 1-5
+
+# Build rule for target.
+1-5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-5
+.PHONY : 1-5
+
+# fast build rule for target.
+1-5/fast:
+	$(MAKE) -f CMakeFiles/1-5.dir/build.make CMakeFiles/1-5.dir/build
+.PHONY : 1-5/fast
+
+#=============================================================================
+# Target rules for targets named 1-6
+
+# Build rule for target.
+1-6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-6
+.PHONY : 1-6
+
+# fast build rule for target.
+1-6/fast:
+	$(MAKE) -f CMakeFiles/1-6.dir/build.make CMakeFiles/1-6.dir/build
+.PHONY : 1-6/fast
+
+#=============================================================================
+# Target rules for targets named 1.6
+
+# Build rule for target.
+1.6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1.6
+.PHONY : 1.6
+
+# fast build rule for target.
+1.6/fast:
+	$(MAKE) -f CMakeFiles/1.6.dir/build.make CMakeFiles/1.6.dir/build
+.PHONY : 1.6/fast
+
+#=============================================================================
+# Target rules for targets named 1-3
+
+# Build rule for target.
+1-3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-3
+.PHONY : 1-3
+
+# fast build rule for target.
+1-3/fast:
+	$(MAKE) -f CMakeFiles/1-3.dir/build.make CMakeFiles/1-3.dir/build
+.PHONY : 1-3/fast
+
+#=============================================================================
+# Target rules for targets named 1-7
+
+# Build rule for target.
+1-7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1-7
+.PHONY : 1-7
+
+# fast build rule for target.
+1-7/fast:
+	$(MAKE) -f CMakeFiles/1-7.dir/build.make CMakeFiles/1-7.dir/build
+.PHONY : 1-7/fast
+
+#=============================================================================
+# Target rules for targets named 1.5
+
+# Build rule for target.
+1.5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 1.5
+.PHONY : 1.5
+
+# fast build rule for target.
+1.5/fast:
+	$(MAKE) -f CMakeFiles/1.5.dir/build.make CMakeFiles/1.5.dir/build
+.PHONY : 1.5/fast
 
 1-1.o: 1-1.c.o
 
@@ -430,22 +456,78 @@ depend:
 	$(MAKE) -f CMakeFiles/1-8.dir/build.make CMakeFiles/1-8.dir/1-8.c.s
 .PHONY : 1-8.c.s
 
+exercise/1.5.o: exercise/1.5.c.o
+
+.PHONY : exercise/1.5.o
+
+# target to build an object file
+exercise/1.5.c.o:
+	$(MAKE) -f CMakeFiles/1.5.dir/build.make CMakeFiles/1.5.dir/exercise/1.5.c.o
+.PHONY : exercise/1.5.c.o
+
+exercise/1.5.i: exercise/1.5.c.i
+
+.PHONY : exercise/1.5.i
+
+# target to preprocess a source file
+exercise/1.5.c.i:
+	$(MAKE) -f CMakeFiles/1.5.dir/build.make CMakeFiles/1.5.dir/exercise/1.5.c.i
+.PHONY : exercise/1.5.c.i
+
+exercise/1.5.s: exercise/1.5.c.s
+
+.PHONY : exercise/1.5.s
+
+# target to generate assembly for a file
+exercise/1.5.c.s:
+	$(MAKE) -f CMakeFiles/1.5.dir/build.make CMakeFiles/1.5.dir/exercise/1.5.c.s
+.PHONY : exercise/1.5.c.s
+
+exercise/1.6.o: exercise/1.6.c.o
+
+.PHONY : exercise/1.6.o
+
+# target to build an object file
+exercise/1.6.c.o:
+	$(MAKE) -f CMakeFiles/1.6.dir/build.make CMakeFiles/1.6.dir/exercise/1.6.c.o
+.PHONY : exercise/1.6.c.o
+
+exercise/1.6.i: exercise/1.6.c.i
+
+.PHONY : exercise/1.6.i
+
+# target to preprocess a source file
+exercise/1.6.c.i:
+	$(MAKE) -f CMakeFiles/1.6.dir/build.make CMakeFiles/1.6.dir/exercise/1.6.c.i
+.PHONY : exercise/1.6.c.i
+
+exercise/1.6.s: exercise/1.6.c.s
+
+.PHONY : exercise/1.6.s
+
+# target to generate assembly for a file
+exercise/1.6.c.s:
+	$(MAKE) -f CMakeFiles/1.6.dir/build.make CMakeFiles/1.6.dir/exercise/1.6.c.s
+.PHONY : exercise/1.6.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... 1-7"
-	@echo "... 1-6"
-	@echo "... 1-5"
-	@echo "... 1-1"
-	@echo "... 1-8"
-	@echo "... 1-3"
 	@echo "... edit_cache"
-	@echo "... 1-2"
+	@echo "... rebuild_cache"
 	@echo "... 1-4"
+	@echo "... 1-2"
+	@echo "... 1-8"
+	@echo "... 1-1"
+	@echo "... 1-5"
+	@echo "... 1-6"
+	@echo "... 1.6"
+	@echo "... 1-3"
+	@echo "... 1-7"
+	@echo "... 1.5"
 	@echo "... 1-1.o"
 	@echo "... 1-1.i"
 	@echo "... 1-1.s"
@@ -470,6 +552,12 @@ help:
 	@echo "... 1-8.o"
 	@echo "... 1-8.i"
 	@echo "... 1-8.s"
+	@echo "... exercise/1.5.o"
+	@echo "... exercise/1.5.i"
+	@echo "... exercise/1.5.s"
+	@echo "... exercise/1.6.o"
+	@echo "... exercise/1.6.i"
+	@echo "... exercise/1.6.s"
 .PHONY : help
 
 
